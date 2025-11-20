@@ -62,7 +62,8 @@ h1 {
     z-index: 1;
 }
 
-.message-box, .title_photos {
+.message-box,
+.title-photos {
     background-color: #fff0f5; /* Blush Pink */
     border: 1px solid #ffcdd2;
     padding: 25px;
