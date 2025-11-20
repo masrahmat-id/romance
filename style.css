@@ -1,0 +1,133 @@
+body {
+    font-family: 'Georgia', serif; /* Font lebih romantis */
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* Gradasi Pink Lembut */
+    color: #444;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Hindari scroll horizontal */
+}
+
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* Latar belakang semi-transparan lebih pekat */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden; /* Untuk efek dekorasi */
+}
+
+/* Dekorasi Hati Kecil di Pojok */
+.container::before, .container::after {
+    content: '❤️';
+    position: absolute;
+    font-size: 3em;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.container::before {
+    top: -15px;
+    left: -15px;
+    transform: rotate(-20deg);
+}
+
+.container::after {
+    bottom: -15px;
+    right: -15px;
+    transform: rotate(20deg);
+}
+
+h1 {
+    color: #d81b60; /* Merah Maroon Lebih Dalam */
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.subtitle {
+    color: #666;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.message-box {
+    background-color: #fff0f5; /* Blush Pink */
+    border: 1px solid #ffcdd2;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 12px;
+    line-height: 1.6;
+    font-size: 1.1em;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.signature {
+    text-align: right;
+    font-weight: bold;
+    color: #d81b60;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.music-player {
+    margin: 40px 0;
+    position: relative;
+    z-index: 1;
+}
+
+audio {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gallery {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Jarak antar gambar */
+    position: relative;
+    z-index: 1;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 280px; /* Ukuran gambar lebih besar */
+    height: auto;
+    object-fit: cover;
+    border: 6px solid white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.08) rotate(2deg); /* Efek zoom dan rotasi */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+    padding: 15px;
+    color: white;
+    background-color: #d81b60;
+    margin-top: auto;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
