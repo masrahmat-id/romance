@@ -1,23 +1,4 @@
-/* CSS Default (Berlaku untuk semua, termasuk desktop) */
 body {
-    font-family: 'Georgia', serif;
-    background: linear-gradient(to right, #ffdde1, #ee9ca7);
-    color: #444;
-    /* ... properti body lainnya ... */
-    font-size: 18px; /* Ukuran font default */
-}
-
-/* Media Query: Terapkan penyesuaian hanya untuk layar maksimal 600px lebar (HP) */
-@media screen and (max-width: 480px) {
-    body {
-        /* Membuat ukuran font lebih kecil di HP */
-        font-size: 16px; 
-        /* Contoh lain: menyesuaikan padding jika ada */
-        padding-top: 20px;
-    }
-}
-
-bodyy {
     font-family: 'Georgia', serif; /* Font lebih romantis */
     background: linear-gradient(to right, #ffdde1, #ee9ca7); /* Gradasi Pink Lembut */
     color: #444;
