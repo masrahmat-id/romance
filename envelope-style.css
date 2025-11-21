@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* Latar belakang yang sama dengan situs utama */
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Hindari scroll saat animasi */
+}
+
+.envelope-container {
+    perspective: 1000px; /* Untuk efek 3D */
+    cursor: pointer;
+    text-align: center;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f7e0e7; /* Warna amplop */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    margin-bottom: 30px;
+}
+
+.envelope-front, .envelope-back, .envelope-flap {
+    position: absolute;
+    background-color: #f7e0e7;
+    border-radius: 10px;
+}
+
+.envelope-front {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.05);
+}
+
+.envelope-back {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.envelope-flap {
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid #f7e0e7; /* Bagian atas amplop */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
+    z-index: 3;
+}
+
+/* Bagian pesan yang terlihat setelah amplop terbuka */
+.envelope-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #d81b60;
+    font-size: 1.2em;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 4; /* Pastikan di atas flap saat terbuka */
+}
+
+.envelope-message h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.instruction {
+    color: #666;
+    font-size: 1.1em;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animasi Amplop Terbuka */
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg); /* Membalik flap */
+    background-color: #e0b0bb; /* Warna flap saat terbuka */
+}
+
+.envelope.open .envelope-message {
+    opacity: 1; /* Tampilkan pesan */
+}
+
+.envelope.open {
+    transform: translateY(-50px); /* Sedikit naik saat terbuka */
+}
+
+
+/* Efek denyut untuk instruksi */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
