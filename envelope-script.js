@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Tunggu sebentar agar animasi amplop terlihat sebelum redirect
         setTimeout(() => {
-            window.location.href = 'main.html'; // Arahkan ke halaman utama situs romantis Anda
+            window.location.href = './main.html'; // Arahkan ke halaman utama situs romantis Anda
         }, 1200); // Sesuaikan waktu (dalam milidetik) agar sesuai dengan durasi animasi CSS
     });
 });
