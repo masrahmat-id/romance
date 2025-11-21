@@ -17,22 +17,6 @@
             <p>Terima kasih sudah menjadi bagian dari cerita indah ini. Aku mencintaimu, hari ini, esok, dan selamanya.</p>
             <p class="signature">- Rahmat</p>
         </div>
-
-        <script>
-    const audio = document.getElementById('background-music');
-
-    // Fungsi untuk memulai musik
-    function playAudio() {
-        audio.play().catch(error => {
-            console.log("Autoplay diblokir:", error);
-        });
-        // Hapus event listener ini setelah berhasil diputar
-        document.removeEventListener('click', playAudio);
-    }
-
-    // Dengarkan klik pertama pengguna di mana saja di halaman
-    document.addEventListener('click', playAudio);
-</script>
         
 <div class="music-player">
     <audio id="background-music" loop autoplay>
@@ -51,5 +35,20 @@
     <footer>
         &copy; 2025 Kisah Cinta Kita
     </footer>
+     <script>
+    const audio = document.getElementById('background-music');
+
+    // Fungsi untuk memulai musik
+    function playAudio() {
+        audio.play().catch(error => {
+            console.log("Autoplay diblokir:", error);
+        });
+        // Hapus event listener ini setelah berhasil diputar
+        document.removeEventListener('click', playAudio);
+    }
+
+    // Dengarkan klik pertama pengguna di mana saja di halaman
+    document.addEventListener('click', playAudio);
+</script>
 </body>
 </html>
